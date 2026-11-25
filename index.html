@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI-powered cancellation risk predictions for Olist e-commerce orders.">
+  <meta name="theme-color" content="#f0ebff">
+  <title>Olist Cancellation Intelligence</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <nav class="navbar container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Olist Intelligence home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img"><path d="M11 21.5 18 28l12-15"/><circle cx="20" cy="20" r="15"/></svg>
+        </span>
+        <span>Olist <strong>Intelligence</strong></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <div class="nav-links">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#prediction">Prediction</a>
+          <a class="nav-link research-link" href="#research">Research Lab <span>Coming Soon</span></a>
+          <a class="nav-link" href="#about">About</a>
+        </div>
+        <a class="button button-small button-primary" href="#prediction">Get Started <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-pad" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span aria-hidden="true">✦</span> AI-Powered E-Commerce Intelligence</p>
+          <h1 id="hero-title">Predict Smarter.<br><span>Understand Better.</span></h1>
+          <p class="hero-description">An intelligent machine learning platform designed to analyze e-commerce transactions, predict cancellation risk, and help businesses make data-driven decisions.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#prediction">Try Prediction <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#how-it-works">Explore Model</a>
+          </div>
+          <div class="trust-note">
+            <span class="trust-icon" aria-hidden="true">✓</span>
+            <span>Live model response</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>No fabricated insights</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Illustrative prediction dashboard preview">
+          <div class="float-chip chip-one" aria-hidden="true"><span>↗</span> Live analysis</div>
+          <div class="float-chip chip-two" aria-hidden="true"><span>✓</span> Secure request</div>
+          <article class="preview-card">
+            <header class="preview-header">
+              <div>
+                <p class="preview-label">Prediction workspace</p>
+                <h2>Order overview</h2>
+              </div>
+              <span class="demo-badge">Demo Preview</span>
+            </header>
+            <div class="sample-order">
+              <div class="order-icon" aria-hidden="true">◇</div>
+              <div><span>Sample order</span><strong>Transaction snapshot</strong></div>
+              <span class="order-status">Illustrative</span>
+            </div>
+            <div class="risk-preview">
+              <div class="risk-dial" aria-hidden="true"><span>?</span></div>
+              <div>
+                <p>Cancellation risk</p>
+                <h3>Awaiting analysis</h3>
+                <span>Submit real details below</span>
+              </div>
+            </div>
+            <div class="preview-bars" aria-hidden="true">
+              <span style="--width: 76%"></span><span style="--width: 48%"></span><span style="--width: 62%"></span>
+            </div>
+            <div class="preview-footer">
+              <span><i class="mint"></i> Model input</span>
+              <span><i class="lavender"></i> Prediction output</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="prediction-section section-pad" id="prediction" aria-labelledby="prediction-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Prediction Workspace</p>
+          <h2 id="prediction-title">Cancellation Risk Prediction</h2>
+          <p>Enter your order details and let our machine learning model analyze the cancellation risk.</p>
+        </div>
+
+        <div class="workspace-grid">
+          <article class="workspace-card form-card reveal">
+            <header class="card-heading">
+              <span class="heading-icon" aria-hidden="true">▤</span>
+              <div><h3>Order Information</h3><p>Complete every field to run a live prediction.</p></div>
+            </header>
+
+            <form id="prediction-form" novalidate>
+              <div class="form-grid">
+                <div class="field field-wide">
+                  <label for="purchase-date">Purchase date</label>
+                  <div class="input-wrap"><span aria-hidden="true">◷</span><input id="purchase-date" name="purchase_date" type="date" min="2000-01-01" max="2100-12-31" required aria-describedby="purchase-date-hint purchase-date-error"></div>
+                  <small id="purchase-date-hint">Year, month, day, and weekday are sent to the model.</small>
+                  <p class="field-error" id="purchase-date-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="purchase-hour">Purchase hour</label>
+                  <div class="input-wrap"><span aria-hidden="true">◴</span><input id="purchase-hour" name="purchase_hour" type="number" inputmode="numeric" min="0" max="23" placeholder="0–23" required aria-describedby="purchase-hour-error"></div>
+                  <p class="field-error" id="purchase-hour-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="customer-state">Customer state</label>
+                  <div class="input-wrap select-wrap"><span aria-hidden="true">⌖</span><select id="customer-state" name="customer_state" required aria-describedby="customer-state-error"><option value="">Select state</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select></div>
+                  <p class="field-error" id="customer-state-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field field-wide">
+                  <label for="customer-city">Customer city</label>
+                  <div class="input-wrap"><span aria-hidden="true">⌂</span><input id="customer-city" name="customer_city" type="text" minlength="2" maxlength="100" autocomplete="address-level2" placeholder="e.g. sao paulo" required aria-describedby="customer-city-hint customer-city-error"></div>
+                  <small id="customer-city-hint">Use the city name as it appears in the order.</small>
+                  <p class="field-error" id="customer-city-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="form-message" id="form-message" role="alert" hidden></div>
+              <div class="form-actions">
+                <button class="button button-primary predict-button" id="predict-button" type="submit"><span class="button-label">Analyze cancellation risk</span><span class="spinner" aria-hidden="true"></span><span aria-hidden="true" class="button-arrow">→</span></button>
+                <button class="button button-ghost" id="reset-button" type="reset">Reset</button>
+              </div>
+              <p class="privacy-note"><span aria-hidden="true">⌁</span> Details are sent only to the connected prediction API.</p>
+            </form>
+          </article>
+
+          <article class="workspace-card result-card reveal" id="result-card" aria-labelledby="result-heading">
+            <header class="card-heading result-card-heading">
+              <span class="heading-icon mint-icon" aria-hidden="true">⌁</span>
+              <div><h3 id="result-heading">Prediction Result</h3><p>Live response from the cancellation model.</p></div>
+              <span class="model-status"><i></i> API connected</span>
+            </header>
+
+            <div class="result-state result-empty" id="result-empty">
+              <div class="empty-illustration" aria-hidden="true"><span>⌁</span><i></i><i></i><i></i></div>
+              <h4>Ready to Analyze</h4>
+              <p>Enter your order details and click Predict to see the cancellation risk.</p>
+            </div>
+
+            <div class="result-state result-loading" id="result-loading" hidden aria-live="polite">
+              <div class="analysis-loader" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h4>Analyzing your order</h4>
+              <p>The model is evaluating the submitted transaction details.</p>
+            </div>
+
+            <div class="result-state result-success" id="result-success" hidden aria-live="polite">
+              <div class="result-topline"><span class="result-pill" id="result-pill">Prediction</span><span class="result-source">Live model output</span></div>
+              <div class="prediction-summary">
+                <div class="result-symbol" id="result-symbol" aria-hidden="true">✓</div>
+                <div><p>Model prediction</p><h4 id="result-status">—</h4><span id="result-summary">—</span></div>
+              </div>
+              <div class="probability-block" id="probability-block">
+                <div class="probability-copy"><span>Cancellation probability</span><strong id="probability-value">—</strong></div>
+                <div class="probability-track" role="progressbar" id="probability-track" aria-label="Cancellation probability" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="probability-bar"></span></div>
+                <div class="risk-scale"><span>Low</span><span>Moderate</span><span>High</span></div>
+              </div>
+              <p class="model-note">This is a model prediction, not a guarantee. Use it as one input in your decision-making process.</p>
+            </div>
+
+            <div class="result-state result-error" id="result-error" hidden role="alert">
+              <div class="error-symbol" aria-hidden="true">!</div><h4>Prediction unavailable</h4><p id="result-error-message">We could not complete the request.</p><button class="button button-secondary" id="try-again-button" type="button">Try again</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section section-pad" id="how-it-works" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-kicker">How It Works</p><h2 id="steps-title">Intelligence Made Simple</h2><p>Three simple steps to understand your order's cancellation risk.</p></div>
+        <div class="steps-grid">
+          <article class="step-card reveal"><span class="step-number">01</span><div class="step-icon lavender-bg" aria-hidden="true">▤</div><h3>Enter Order Details</h3><p>Provide the transaction information required by our prediction model.</p></article>
+          <article class="step-card reveal"><span class="step-number">02</span><div class="step-icon mint-bg" aria-hidden="true">✣</div><h3>AI-Powered Analysis</h3><p>Our trained machine learning model analyzes the submitted order information.</p></article>
+          <article class="step-card reveal"><span class="step-number">03</span><div class="step-icon peach-bg" aria-hidden="true">↗</div><h3>View Prediction</h3><p>Receive a cancellation prediction and available risk information.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-section section-pad" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-kicker">Future Research</p><h2 id="research-title">Beyond Prediction</h2><p>Exploring the next generation of intelligent retail analytics.</p></div>
+        <div class="bento-grid">
+          <article class="bento-card reveal"><div class="bento-copy"><span class="coming-badge">Coming Soon</span><div class="bento-icon" aria-hidden="true">⌬</div><h3>Model Research Lab</h3><p>A dedicated workspace for data scientists to explore machine learning models, compare evaluation metrics, and investigate model performance.</p></div><div class="lab-preview" aria-hidden="true"><div class="lab-toolbar"><span></span><span></span><span></span></div><div class="lab-content"><div class="lab-line"><i></i><i></i><i></i><i></i><i></i></div><div class="lab-stats"><span></span><span></span><span></span></div></div></div></article>
+          <article class="bento-card reveal"><div class="bento-copy"><span class="coming-badge peach-badge">Coming Soon</span><div class="bento-icon peach-icon" aria-hidden="true">▦</div><h3>Intelligent Dataset Analyzer</h3><p>Upload transaction datasets, explore data quality, identify unusual patterns, and discover meaningful insights.</p></div><div class="data-preview" aria-hidden="true"><div class="data-row"><span></span><i></i><i></i><i></i></div><div class="data-row"><span></span><i></i><i></i><i></i></div><div class="data-row"><span></span><i></i><i></i><i></i></div><div class="data-row"><span></span><i></i><i></i><i></i></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal"><p class="section-kicker">About the Project</p><h2 id="about-title">Built for Smarter<br>E-Commerce Decisions</h2><p>Olist Cancellation Intelligence combines machine learning with an intuitive interface to help users investigate order cancellation patterns and understand model predictions.</p><a class="text-link" href="#prediction">Explore the prediction workspace <span aria-hidden="true">→</span></a></div>
+        <div class="about-cards">
+          <article class="info-card reveal"><span aria-hidden="true">✣</span><div><h3>Machine Learning Powered</h3><p>Connected to a trained cancellation prediction model through a live API.</p></div></article>
+          <article class="info-card reveal"><span aria-hidden="true">↗</span><div><h3>Data-Driven Insights</h3><p>Turns order attributes into a clear, readable model prediction.</p></div></article>
+          <article class="info-card reveal"><span aria-hidden="true">⌬</span><div><h3>Research-Oriented Platform</h3><p>Designed as a foundation for further e-commerce ML exploration.</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main"><div><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 21.5 18 28l12-15"/><circle cx="20" cy="20" r="15"/></svg></span><span>Olist <strong>Intelligence</strong></span></a><p>Making e-commerce intelligence accessible.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#prediction">Prediction</a><a href="#research">Research Lab</a><a href="#about">About</a></nav></div>
+    <div class="container footer-bottom"><p>© 2026 Olist Cancellation Intelligence. Academic Machine Learning Project.</p><a href="https://olist-cancellation-api.onrender.com/docs" target="_blank" rel="noopener noreferrer">API Documentation <span aria-hidden="true">↗</span></a></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/prediction.js" defer></script>
+</body>
+</html>

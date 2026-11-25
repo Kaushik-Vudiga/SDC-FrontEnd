@@ -1,0 +1,19 @@
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies, build output, and local reports
+node_modules/
+dist/
+build/
+coverage/
+*.log
