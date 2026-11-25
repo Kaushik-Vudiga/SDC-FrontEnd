@@ -1,7 +1,10 @@
 "use strict";
 
+const API_BASE_URL = "https://olist-cancellation-api.onrender.com";
+
 const PREDICTION_CONFIG = Object.freeze({
-  endpoint: "https://olist-cancellation-api.onrender.com/predict",
+  endpoint: `${API_BASE_URL}/predict`,
+  healthEndpoint: `${API_BASE_URL}/health`,
   // Render instances may need time to wake after inactivity.
   timeoutMs: 90000,
   probabilityThresholds: Object.freeze({ lowMax: 0.35, moderateMax: 0.65 })
@@ -169,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const diagnoseConnection = async () => {
     if (!navigator.onLine) return "Your browser appears to be offline. Reconnect and try again.";
     try {
-      await fetch("https://olist-cancellation-api.onrender.com/health", {
+      await fetch(PREDICTION_CONFIG.healthEndpoint, {
         mode: "no-cors",
         signal: AbortSignal.timeout(8000)
       });
